@@ -72,10 +72,10 @@ angularnewsfeed
         * Free Regular Icons
         * Free Brands Icons
         * Do not select the following Icons as they are not free to use
-         * Pro Solid Icons    [ Requires: https://fontawesome.com/pro ]
-         * Pro Regular Icons  [ Requires: https://fontawesome.com/pro ]
-         * Pro Light Icons    [ Requires: https://fontawesome.com/pro ]
-         * Pro Duotone Icons  [ Requires: https://fontawesome.com/pro ]
+          * Pro Solid Icons    [ Requires: https://fontawesome.com/pro ]
+          * Pro Regular Icons  [ Requires: https://fontawesome.com/pro ]
+          * Pro Light Icons    [ Requires: https://fontawesome.com/pro ]
+          * Pro Duotone Icons  [ Requires: https://fontawesome.com/pro ]
       * Click Enter
         * **WAIT FOR THIS TO FINISH**
   * Utilize the font awesome in your project add the following lines to your app.module.ts file. Your icons will differ from what is shown below.
