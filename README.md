@@ -288,7 +288,7 @@ angularnewsfeed
 
 ### Modify the following files to change the custom uri
 * If you have a specific URI that you are targeting, then proceed with the following modification
-  * Navigate to the angular project src folder and locate the "<base href="">" line in src/index.html file
+  * Navigate to the angular project src folder and locate the "&#60;base href=""&#62;" line in src/index.html file
     * Change line
       * From
         * `<base href="/">`
