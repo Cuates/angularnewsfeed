@@ -94,13 +94,14 @@ angularnewsfeed
         import { faThumbsDown as faThumbsDown } from '@fortawesome/free-solid-svg-icons';
         import { faExternalLinkAlt as faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
         import { faFilm as faFilm } from '@fortawesome/free-solid-svg-icons';
+        import { faNewspaper as faNewspaper } from '@fortawesome/free-solid-svg-icons';
       </pre>
   * Add the following lines of code to your app.module.ts file as well. Create a constructor function to retrieve the font awesome icon(s) of choice. Put the constructor into the export class AppModule section at the bottom of the page
     * <pre>
         // Add font awesome to the constructor
         constructor(library: FaIconLibrary) {
           // Adding the icons to be utilized throughout the web pages
-          library.addIcons(faBars, faTimes, faHome, faInfo, faSearch, faPlus, faEdit, faSpinner, faTrashAlt, faThumbsUp, faThumbsDown, faExternalLinkAlt, faFilm);
+          library.addIcons(faBars, faTimes, faHome, faInfo, faSearch, faPlus, faEdit, faSpinner, faTrashAlt, faThumbsUp, faThumbsDown, faExternalLinkAlt, faFilm, faNewspaper);
         }
       </pre>
 * Angular Material Package
