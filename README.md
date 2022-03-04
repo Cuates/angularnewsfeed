@@ -118,7 +118,7 @@ angularnewsfeed
         ? Set up global Angular Material typography styles? (y/N) Yes
         ? Set up browser animations for Angular Material? (Y/n) Yes
       </pre>
-    * The above will automatically be inserted into the angular.json file under the styles section of the file
+    * The above will automatically be inserted into the angular.json file under the styles sections of the file
       * `"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",`
 * Install Material Datepicker and Time Picker Package
   * `npm install @angular-material-components/datetime-picker`
