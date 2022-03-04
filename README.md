@@ -320,6 +320,7 @@ angularnewsfeed
                   "maximumError": "2mb"
                 </pre>
           * Save and Exit
+          * Re-execute build command above
 
 ### Links
 [nvm](https://github.com/nvm-sh/nvm) <br />
