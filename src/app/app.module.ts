@@ -13,6 +13,7 @@ import { faSpinner as faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt as faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt as faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper as faNewspaper } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle as faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -58,6 +59,6 @@ export class AppModule {
   // Add font awesome to the constructor
   constructor(library: FaIconLibrary) {
     // Adding the icons to be utilized throughout the web pages
-    library.addIcons(faBars, faTimes, faHome, faInfo, faSpinner, faTrashAlt, faExternalLinkAlt, faNewspaper);
+    library.addIcons(faBars, faTimes, faHome, faInfo, faSpinner, faTrashAlt, faExternalLinkAlt, faNewspaper, faExclamationTriangle);
   }
 }
