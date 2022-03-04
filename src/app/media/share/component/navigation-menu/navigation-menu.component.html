@@ -1,0 +1,40 @@
+<div class="navMenu offcanvas-resize offcanvas offcanvas-start d-flex" tabindex="-1" id="offcanvasWithBackdropMenu" aria-labelledby="offcanvasWithBackdropMenuLabel">
+  <!-- Set the off canvas header //-->
+  <div class="offcanvas-header">
+    <div class="navMenuTitle py-3 d-flex fw-bold justify-content-between align-items-center offcanvas-title" id="offcanvasWithBackdropMenuLabel">
+      project_name Menu
+    </div>
+    <div class="faBarsIconContainer d-flex justify-content-end">
+      <span role="button" aria-pressed="false" tabindex="0" data-bs-dismiss="offcanvas" aria-label="Close">
+        <!-- Add font awesome icon to the page //-->
+        <fa-icon class="faIconStyle" [icon]="['fas', 'times']" [fixedWidth]="true">
+        </fa-icon>
+      </span>
+    </div>
+  </div>
+  <!-- Set up the off canvas body to display when not collapsed //-->
+  <div class="offcanvas-body">
+    <ul>
+      <!-- Set the router link active style after it has been clicked. Also, make sure to match the exact router link site //-->
+      <li class="listNavMenuTop listNavMenuBottom" [routerLinkActive]="['activeLink']" [routerLinkActiveOptions]="{exact:true}">
+        <!-- Add a router link to navigate to a specific site //-->
+        <a routerLink="" data-bs-dismiss="offcanvas" aria-label="Close" class="text-decoration-none py-3 d-block">
+          <!-- Add font awesome icon to the page //-->
+          <fa-icon class="faIconStyle" [icon]="['fas', 'home']" [fixedWidth]="true">
+          </fa-icon>
+          Home
+        </a>
+      </li>
+      <!-- Set the router link active style after it has been clicked. Also, make sure to match the exact router link site //-->
+      <li class="listNavMenuBottom" [routerLinkActive]="['activeLink']" [routerLinkActiveOptions]="{exact:true}">
+        <!-- Add a router link to navigate to a specific site //-->
+        <a routerLink="/about" data-bs-dismiss="offcanvas" aria-label="Close" class="text-decoration-none py-3 d-block">
+          <!-- Add font awesome icon to the page //-->
+          <fa-icon class="faIconStyle" [icon]="['fas', 'info']" [fixedWidth]="true">
+          </fa-icon>
+          About
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

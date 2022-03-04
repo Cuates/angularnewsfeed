@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Header height
+$headerSize: 2.33em;
+
+// Footer height
+$footerSize: 2.33em;
+
+// Font family
+$fontFamily: 'Times New Roman', Times, serif !important;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $fontFamily;
+}
+
+// Middle page style
+.pageStyle {
+  background-color: #1D398A;
+  min-height: calc(100vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
+  // min-height: calc(100vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
+}
+
+/* For firefox */
+@-moz-document url-prefix() {
+  .pageStyle {
+    background-color: #1D398A;
+    min-height: calc(101.1vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
+  }
+}
+
+// Middle page display container Style
+.displayContainer {
+  background-color: #C3B4FB;
+  color: #FEF2C6;
+}
+
+// Page Title Style
+.pageTitle {
+  font-size: 1.4em;
+}
+
+// Extract Search Container Style
+.pageTitleContainer {
+  background-color: #065E45;
+  color: #FEF2C6;
+}
+
+// Style of the font awesome icon on the page
+.faIconStyle {
+  font-size: 1.2em;
+}
+
+// Card Style
+.cardStyle {
+  background-color: #364051;
+  color: #FEF2C6;
+}
+
+// Card Title Style
+.cardTitle {
+  font-size: 1.3em;
+}
+
+// Card Name Style
+.cardName {
+  font-size: 1.2em;
+}
+
+// Card Date Style
+.cardDate {
+  font-size: 1.2em;
+}
+
+// Card Status Style
+.cardStatus {
+  font-size: 1.2em;
+}
+
+// Create the loader gif via CSS
+.wrapperLoaderRowStyle {
+  background-color: #000000;
+}
+
+// Button style
+.buttonStyle {
+  background-color: #6B7280;
+  color: #000000;
+}
+
+// Error Status Style
+.errorTitle {
+  font-size: 1.3em;
+  color: #FF0000;
+}
+
+// Error Status Style
+.errorStatus {
+  font-size: 1.3em;
+  color: #FF0000;
+}
+
+// Error Status Message Style
+.errorStatusMessage {
+  font-size: 1.3em;
+  color: #FF0000;
+}
+
+// Set button font family
+.mat-button, .mat-flat-button, .mat-raised-button {
+  font-family: $fontFamily;
+}

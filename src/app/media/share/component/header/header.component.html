@@ -1,0 +1,20 @@
+<header>
+  <div class="headerContainer d-flex align-items-center justify-content-between fw-bold fs-5 px-2">
+    <div class="d-flex justify-content-start">
+      <!-- Add a router link to navigate to a specific site //-->
+      <a routerLink="" class="brandLink text-decoration-none">
+        project_name
+      </a>
+    </div>
+    <div class="d-flex justify-content-end">
+      <!-- Set up the button for off canvas to be displayed //-->
+      <span role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdropMenu" aria-controls="offcanvasWithBackdropMenu">
+        <!-- Add font awesome icon to the page //-->
+        <fa-icon class="faIconStyle" [icon]="['fas', 'bars']" [fixedWidth]="true">
+        </fa-icon>
+      </span>
+    </div>
+  </div>
+</header>
+<!-- Display the navigation menu component //-->
+<app-navigation-menu></app-navigation-menu>
