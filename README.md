@@ -201,7 +201,7 @@ angularnewsfeed
         &#60;/mat-form-field&#62;
       </pre>
     * Save and Exit
-  * Navigate to the .css component of choice file and add the following to the css code
+  * Navigate to the .scss component of choice file and add the following to the css code
     * <pre>
         // Input field styling
         .mat-form-field {
@@ -218,6 +218,7 @@ angularnewsfeed
           font-size: 3.5em;
         }
       </pre>
+    * Save and Exit
 
 ### Basic Commands
 * Generate component
