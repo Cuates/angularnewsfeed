@@ -53,7 +53,7 @@ angularnewsfeed
     * `npm install --save bootstrap`
       * **WAIT FOR THIS TO FINISH**
   * Reconfigure the angular.json file to include the new bootstrap files
-    * Open the angular.json file in the scripts section and add the two lines for bootstrap.
+    * Open the angular.json file in the scripts sections and add the two lines for bootstrap.
       * <pre>
           "styles": [
             "node_modules/bootstrap/dist/css/bootstrap.min.css",
