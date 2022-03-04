@@ -293,7 +293,7 @@ angularnewsfeed
       * From
         * `<base href="/">`
       * To
-        * `<base href="/<URL_Name>/">`
+        * `<base href="/<uri_name>/">`
     * Save and Exit
 
 ### Build Application for Production
