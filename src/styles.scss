@@ -36,7 +36,7 @@ body {
 
 // Middle page display container Style
 .displayContainer {
-  background-color: #C3B4FB;
+  background-color: #D1BEA8;
   color: #FEF2C6;
 }
 
@@ -111,7 +111,75 @@ body {
   color: #FF0000;
 }
 
-// Set button font family
+mat-form-field {
+  width: 15em;
+  font-family: $fontFamily;
+}
+
+mat-select {
+  font-family: $fontFamily;
+}
+
 .mat-button, .mat-flat-button, .mat-raised-button {
   font-family: $fontFamily;
+}
+
+// Mat form field style
+mat-form-field.mat-form-field {
+  // font-size: .3em;
+  background-color: #065E45;
+  color: #000000;
+}
+
+// Set mat form field subscript wrapper style
+div.mat-form-field-subscript-wrapper {
+  background-color: #f7d6da;
+  border-radius: 3px;
+}
+
+// Set mat error style
+.mat-error {
+  color: #842028;
+}
+
+// Set the style for input field
+div.mat-form-field-flex {
+  background-color: #FEF2C6;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+// Entire calendar style
+ngx-mat-calendar {
+  background-color: #FEF2C6;
+  color: #000000;
+}
+
+// Entire time style
+div.time-container {
+  background-color: #FEF2C6;
+  color: #000000;
+}
+
+// Entire action style
+div.actions {
+  background-color: #FEF2C6;
+  color: #000000;
+}
+
+// // Set the border style for not touched input field
+// mat-form-field.mat-form-field-appearance-outline.mat-form-field-can-float .mat-form-field-outline-thick {
+//   color: white;
+// }
+
+// Border for not touched input field
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #FEF2C6;
+}
+
+// Border for not touched input field hover
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #FEF2C6;
 }
