@@ -361,6 +361,10 @@ angularnewsfeed
 [angular-formcontrol-validators](https://www.concretepage.com/angular/angular-formcontrol-validators) <br />
 [material angular form field](https://v7.material.angular.io/components/form-field/overview) <br />
 [hex-color-picker](https://colors-picker.com/hex-color-picker/) <br />
+[color-picker](https://webbrowsertools.com/color-picker) <br />
+[color-names](https://www.colorhexa.com/color-names) <br />
+[shades-of-white-color-names-html-hex-rgb-codes](https://www.color-meanings.com/shades-of-white-color-names-html-hex-rgb-codes) <br />
+[html-color-white](https://html-color.codes/white) <br />
 [angular-regex-url-pattern-validation-example-tutorial](https://remotestack.io/angular-regex-url-pattern-validation-example-tutorial/) <br />
 [angular-disable-button-example.html](https://www.netjstech.com/2020/04/angular-disable-button-example.html) <br />
 [material angular button](https://material.angular.io/components/button/overview) <br />
