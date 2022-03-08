@@ -481,3 +481,5 @@ angularnewsfeed
 [angular-project-structure-best-practice](https://stackoverflow.com/questions/52933476/angular-project-structure-best-practice) <br />
 [angular-architecture-best-practices](https://dev-academy.com/angular-architecture-best-practices/) <br />
 [Bootstrap Image](https://getbootstrap.com/docs/5.0/content/images/) <br />
+[ngx-scrolltop](https://github.com/bartholomej/ngx-scrolltop) <br />
+[Adding-a-Scroll-to-Top-button-in-Angular](https://www.techtrek.io/Adding-a-Scroll-to-Top-button-in-Angular) <br />
