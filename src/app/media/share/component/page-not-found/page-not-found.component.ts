@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -12,10 +14,17 @@ export class PageNotFoundComponent implements OnInit {
   title = 'Page Not Found';
 
   // Add the ability to change title
-  constructor(private titleService:Title) { }
+  constructor(private titleService:Title, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     // Set title on page
     this.titleService.setTitle(this.title);
+
+    // Clear the URL with no hardcode and will not re-load the page
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams: {},
+      replaceUrl: true,
+    });
   }
 }
