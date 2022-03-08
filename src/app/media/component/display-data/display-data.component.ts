@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute } from '@angular/router';
+
 import { Title } from '@angular/platform-browser';
 
 import { SetVariableService } from '../../share/service/global/set-variable.service';
@@ -30,12 +32,45 @@ export class DisplayDataComponent implements OnInit {
   limitValue:string = '25';
   sortValue:string = 'desc';
 
+  // Query parameter and array
+  queryLimit:string = '';
+  querySort:string = '';
+  queryData: any = {};
+
   // Add the ability to change title
-  constructor(private titleService:Title, private setVariableService: SetVariableService, private getDataService: GetDataService, private deleteDataService: DeleteDataService) { }
+  constructor(private titleService:Title, private setVariableService: SetVariableService, private getDataService: GetDataService, private deleteDataService: DeleteDataService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     // Set title on page
     this.titleService.setTitle(this.title);
+
+    // Retrieve query string parameters if given
+    this.activatedRoute.queryParams.subscribe(params => {
+      // Check all keys in query string if given
+      for (const key in params) {
+        // Add the key and value into the new array list
+        // The key will be lowercase and the value will be normal
+        this.queryData[key.toLowerCase()] = params[key]
+      }
+
+      // Set the value if given from the new array list
+      this.queryLimit = this.queryData.limit;
+
+      // Set the value if given from the new array list with the value being lowercased
+      this.querySort = this.queryData.sort.toLowerCase();
+    })
+
+    // Check if values were given in the query string and if the value is within range
+    if(this.queryLimit && this.queryLimit !== '' && (Number(this.queryLimit) > 0 && Number(this.queryLimit) <= 100)) {
+      // Set value to query string value
+      this.limitValue = this.queryLimit;
+    }
+
+    // Check if values were given in the query string and check if they have a proper value
+    if(this.querySort !== '' && (this.querySort === 'asc' || this.querySort === 'desc')) {
+      // Set value to query string value
+      this.sortValue = this.querySort;
+    }
 
     // Set parameters for the API call
     this.setVariableService.params = {
