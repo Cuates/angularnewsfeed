@@ -500,3 +500,10 @@ angularnewsfeed
 [Bootstrap Image](https://getbootstrap.com/docs/5.0/content/images/) <br />
 [ngx-scrolltop](https://github.com/bartholomej/ngx-scrolltop) <br />
 [Adding-a-Scroll-to-Top-button-in-Angular](https://www.techtrek.io/Adding-a-Scroll-to-Top-button-in-Angular) <br />
+[what-is-the-difference-between-parseint-and-number](https://stackoverflow.com/questions/4090518/what-is-the-difference-between-parseint-and-number/4090577#4090577) <br />
+[how-to-get-query-string-from-url-in-angularexample](https://www.itsolutionstuff.com/post/how-to-get-query-string-from-url-in-angularexample.html) <br />
+[angular-pass-url-parameters-query-strings](https://www.tektutorialshub.com/angular/angular-pass-url-parameters-query-strings/) <br />
+[angular-13-tutorial-routing-and-navigation](https://www.djamware.com/post/62197130a88c5503bd165482/angular-13-tutorial-routing-and-navigation) <br />
+[angular-router-tutorial](https://www.positronx.io/angular-router-tutorial/) <br />
+[how-to-take-the-values-from-the-case-sensitive-query-param-variables](https://stackoverflow.com/questions/50098153/how-to-take-the-values-from-the-case-sensitive-query-param-variables) <br />
+[typescript_string_tolowercase](https://www.tutorialspoint.com/typescript/typescript_string_tolowercase.htm) <br />
