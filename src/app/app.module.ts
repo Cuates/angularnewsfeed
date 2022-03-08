@@ -29,6 +29,8 @@ import { LoaderComponent } from './media/share/component/loader/loader.component
 import { NavigationMenuComponent } from './media/share/component/navigation-menu/navigation-menu.component';
 import { PageNotFoundComponent } from './media/share/component/page-not-found/page-not-found.component';
 
+import { NgxScrollTopModule } from 'ngx-scrolltop';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { PageNotFoundComponent } from './media/share/component/page-not-found/pa
     FontAwesomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxScrollTopModule
   ],
   providers: [
     Title
