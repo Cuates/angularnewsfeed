@@ -507,3 +507,8 @@ angularnewsfeed
 [angular-router-tutorial](https://www.positronx.io/angular-router-tutorial/) <br />
 [how-to-take-the-values-from-the-case-sensitive-query-param-variables](https://stackoverflow.com/questions/50098153/how-to-take-the-values-from-the-case-sensitive-query-param-variables) <br />
 [typescript_string_tolowercase](https://www.tutorialspoint.com/typescript/typescript_string_tolowercase.htm) <br />
+[angular-query-parameters](https://www.digitalocean.com/community/tutorials/angular-query-parameters) <br />
+[routerlinkactive-allow-any-query-params](https://stackoverflow.com/questions/41998274/routerlinkactive-allow-any-query-params) <br />
+[IsActiveMatchOptions](https://angular.io/api/router/IsActiveMatchOptions) <br />
+[RouterLinkActive](https://angular.io/api/router/RouterLinkActive) <br />
+[angular-passing-optional-query-parameters-to-route/](https://www.tektutorialshub.com/angular/angular-passing-optional-query-parameters-to-route/) <br />
