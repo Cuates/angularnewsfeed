@@ -16,7 +16,7 @@
   <div class="offcanvas-body">
     <ul>
       <!-- Set the router link active style after it has been clicked. Also, make sure to match the exact router link site //-->
-      <li class="listNavMenuTop listNavMenuBottom" [routerLinkActive]="['activeLink']" [routerLinkActiveOptions]="{exact:true}">
+      <li class="listNavMenuTop listNavMenuBottom" [routerLinkActive]="['activeLink']" [routerLinkActiveOptions]="{matrixParams: 'ignored', queryParams: 'ignored', fragment: 'ignored', paths: 'exact'}">
         <!-- Add a router link to navigate to a specific site //-->
         <a routerLink="" data-bs-dismiss="offcanvas" aria-label="Close" class="text-decoration-none py-3 d-block">
           <!-- Add font awesome icon to the page //-->
@@ -26,7 +26,7 @@
         </a>
       </li>
       <!-- Set the router link active style after it has been clicked. Also, make sure to match the exact router link site //-->
-      <li class="listNavMenuBottom" [routerLinkActive]="['activeLink']" [routerLinkActiveOptions]="{exact:true}">
+      <li class="listNavMenuBottom" [routerLinkActive]="['activeLink']" [routerLinkActiveOptions]="{matrixParams: 'ignored', queryParams: 'ignored', fragment: 'ignored', paths: 'exact'}">
         <!-- Add a router link to navigate to a specific site //-->
         <a routerLink="/about" data-bs-dismiss="offcanvas" aria-label="Close" class="text-decoration-none py-3 d-block">
           <!-- Add font awesome icon to the page //-->
