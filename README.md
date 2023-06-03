@@ -18,6 +18,7 @@ angularnewsfeed
 
 ### **Important Note**
 * This script was written with Angular 13.2.5 methods on NodeJS 17.6.0
+* Updates to script with Angular 16.0.3 methods on NodeJS 18.16.0
 
 ### Prerequisite Environment
 * Install
@@ -39,7 +40,7 @@ angularnewsfeed
           * Choose SCSS
         * `ng new <project-name> --style=scss/css/... --skipTests --routing=true/false`
           * NOTE: A newer flag will be utilized from now on
-            * `ng new <project-name> --style=scss/css/... --skiptests --routing=true/false`
+            * `ng new <project-name> --style=scss/css/... --skip-tests=true/false --routing=true/false`
           * **WAIT FOR THIS TO FINISH**
 * Open Command Prompt without Administrator
   * Navigate to project
@@ -48,6 +49,30 @@ angularnewsfeed
         * `ng serve`
 * Start Angular which opens in a web browser
   * `ng serve -o`
+* Check for outdated packages
+  * Make sure you are in the correct directory to install the font in the new angular project
+    * Open a terminal and navigate to the project location
+      * Execute the following command in the powershell terminal
+        * `npm outdated`
+* Update packages
+  * Make sure you are in the correct directory to install the font in the new angular project
+    * Open a terminal and navigate to the project location
+      * Execute the following command in the powershell terminal
+        * ng update <package_name>
+        * i.e. `ng update @angular/material`
+      * Not sure if this works but a website says if you are updating from an existing lower version to a newer version, then remove the package first and then add the new package to the project again
+        * Remove existing package
+          * npm remove <package_name>
+          * i.e. `npm remove @angular/material`
+        * Add new package
+          * npm add <package_name>
+          * i.e. `npm add @angular/material`
+* Install package
+  * Make sure you are in the correct directory for nexus to install the font in the new angular project
+    * Open a terminal and navigate to the project location
+      * Execute the following command in the powershell terminal
+        * ng add <package_name>
+        * i.e. `ng add @angular/material`
 * Bootstrap (Make sure you are in the Angular project folder)
   * Install Bootstrap
     * `npm install --save bootstrap`
@@ -117,13 +142,15 @@ angularnewsfeed
           Purple/Green       [ Preview: https://material.angular.io?theme=purple-green ]
           Custom
         ? Set up global Angular Material typography styles? (y/N) Yes
+        ? Include the Angular animations module?
+        > Include and enable animations
         ? Set up browser animations for Angular Material? (Y/n) Yes
       </pre>
     * The above will automatically be inserted into the angular.json file under the styles sections of the file
       * `"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",`
-* Install Material Datepicker and Time Picker Package
+* Install Material Datepicker and Time Picker Package **NOT COMPATIBLE WITH ANGULAR 16+ AT THE MOMENT**
   * `npm install @angular-material-components/datetime-picker`
-* Install Material Moment Adapter Package
+* Install Material Moment Adapter Package **NOT COMPATIBLE WITH ANGULAR 16+ AT THE MOMENT**
   * `npm install @angular-material-components/moment-adapter`
 * Utilize the Material Datepicker and Time Picker and Material Moment Adapter in your project, add the following lines to your app.module.ts file. Your settings will differ from what is shown below.
   * Add the following into the import section of the src/app/app.module.ts file
@@ -253,6 +280,30 @@ angularnewsfeed
     * `ng g s <name-of-service> --skip-tests=true`
   * If you want the service to be placed into a folder
     * `ng g s <folder_name>/<name-of-service> --skip-tests=true`
+* Generate Interface
+  * Spelled out flags
+    * `ng generate interface <name-of-interface> [type]`
+  * Short version flags
+    * `ng g i <name-of-interface> [type]`
+  * i.e. `ng g i <name-of-interface> interface`
+* Generate Class
+  * Spelled out flags
+    * `ng generate class <name-of-class> --skip-tests=true`
+  * Short version flags
+    * `ng g cl <name-of-class> --skip-tests=true`
+  * i.e. `ng g cl <name-of-class> --skip-tests=true`
+* Generate Enum (Enumerator)
+  * Spelled out flags
+    * `ng generate enum <name-of-enum> --type=enum`
+  * Short version flags
+    * `ng g e <name-of-enum> --type=enum`
+  * i.e. `ng g e <name-of-class> --type=enum`
+* Generate Directive
+  * Spelled out flags
+    * `ng generate directive <name-of-directive>`
+  * Short version flags
+    * `ng g d <name-of-directive>`
+  * i.e. `ng g d <name-of-directive>`
 
 ### Change Page Title
 * Get the title to display for each component
