@@ -4,22 +4,13 @@ import { BrowserModule, Title} from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBars as faBars } from '@fortawesome/free-solid-svg-icons';
-import { faTimes as faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faHome as faHome } from '@fortawesome/free-solid-svg-icons';
-import { faInfo as faInfo } from '@fortawesome/free-solid-svg-icons';
-import { faSpinner as faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { faTrashAlt as faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { faExternalLinkAlt as faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faNewspaper as faNewspaper } from '@fortawesome/free-solid-svg-icons';
-import { faExclamationTriangle as faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AboutComponent } from './media/component/about/about.component';
 import { DisplayDataComponent } from './media/component/display-data/display-data.component';
@@ -45,10 +36,11 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatProgressSpinnerModule,
     MatButtonModule,
+    MatIconModule,
     NgxScrollTopModule
   ],
   providers: [
@@ -59,9 +51,7 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
   ]
 })
 export class AppModule {
-  // Add font awesome to the constructor
-  constructor(library: FaIconLibrary) {
-    // Adding the icons to be utilized throughout the web pages
-    library.addIcons(faBars, faTimes, faHome, faInfo, faSpinner, faTrashAlt, faExternalLinkAlt, faNewspaper, faExclamationTriangle);
+  // Constructor
+  constructor() {
   }
 }
