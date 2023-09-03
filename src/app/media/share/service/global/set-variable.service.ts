@@ -20,5 +20,6 @@ export class SetVariableService {
     'Accept': 'application/json'
   }
 
-  constructor() { }
+  constructor() {
+  }
 }
