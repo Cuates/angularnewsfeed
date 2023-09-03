@@ -4,7 +4,7 @@
 $headerSize: 2.33em;
 
 // Footer height
-$footerSize: 2.33em;
+$footerSize: 1.3em;
 
 // Font family
 $fontFamily: 'Times New Roman', Times, serif !important;
@@ -16,28 +16,35 @@ body {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: $fontFamily;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
 }
 
 // Middle page style
 .pageStyle {
-  background-color: #1D398A;
+  background-color: #1D398A !important;
   min-height: calc(100vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
+  padding-bottom: 3.63em;
   // min-height: calc(100vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
 }
 
 /* For firefox */
-@-moz-document url-prefix() {
-  .pageStyle {
-    background-color: #1D398A;
-    min-height: calc(101.1vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
-  }
-}
+// @-moz-document url-prefix() {
+//  .pageStyle {
+//    background-color: #1D398A !important;
+//    min-height: calc(101.1vh - $headerSize - $footerSize); // minimum height calculations viewport height minus header minus footer
+//  }
+// }
 
 // Middle page display container Style
 .displayContainer {
-  background-color: #D1BEA8;
-  color: #FEF2C6;
+  background-color: #D1BEA8 !important;
+  color: #FEF2C6 !important;
 }
 
 // Page Title Style
@@ -47,19 +54,14 @@ body {
 
 // Extract Search Container Style
 .pageTitleContainer {
-  background-color: #065E45;
-  color: #FEF2C6;
-}
-
-// Style of the font awesome icon on the page
-.faIconStyle {
-  font-size: 1.2em;
+  background-color: #065E45 !important;
+  color: #FEF2C6 !important;
 }
 
 // Card Style
 .cardStyle {
-  background-color: #364051;
-  color: #FEF2C6;
+  background-color: #364051 !important;
+  color: #FEF2C6 !important;
 }
 
 // Card Title Style
@@ -84,34 +86,34 @@ body {
 
 // Create the loader gif via CSS
 .wrapperLoaderRowStyle {
-  background-color: #000000;
+  background-color: #000000 !important;
 }
 
 // Button style
 .buttonStyle {
-  background-color: #6B7280;
-  color: #000000;
+  background-color: #6B7280 !important;
+  color: #000000 !important;
 }
 
 // Error Status Style
 .errorTitle {
   font-size: 1.3em;
-  color: #FF0000;
+  color: #FF0000 !important;
 }
 
 // Error Status Style
 .errorStatus {
   font-size: 1.3em;
-  color: #FF0000;
+  color: #FF0000 !important;
 }
 
 // Error Status Message Style
 .errorStatusMessage {
   font-size: 1.3em;
-  color: #FF0000;
+  color: #FF0000 !important;
 }
 
 // Set button font family
-.mat-button, .mat-flat-button, .mat-raised-button {
+.mat-mdc-button, .mat-mdc-unelevated-button, .mat-mdc-raised-button {
   font-family: $fontFamily;
 }
