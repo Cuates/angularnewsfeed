@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project_name": {
+    "angularnewsfeed": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project_name",
+            "outputPath": "dist/angularnewsfeed",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -98,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "project_name:build:production"
+              "browserTarget": "angularnewsfeed:build:production"
             },
             "development": {
-              "browserTarget": "project_name:build:development"
+              "browserTarget": "angularnewsfeed:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,7 +109,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project_name:build"
+            "browserTarget": "angularnewsfeed:build"
           }
         },
         "test": {
@@ -137,5 +137,7 @@
       }
     }
   },
-  "defaultProject": "project_name"
+  "cli": {
+    "analytics": false
+  }
 }
