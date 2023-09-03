@@ -338,14 +338,15 @@ angularnewsfeed
 ### Setup the Angular project in Nginx conf file
 * Open your nginx configuration of choice and add the following two sections to the file in your "server" section
   * <pre>
-      location /&#60;uri_name&#62; {
-        alias &#60;path_to_angular_dist_project_folder&#62;;
-        autoindex off;
-      }
+      listen &#60;port_number&#62;
+      server_name &#60;domain_name/container_name&#62;
+      root /path/to/nginx/html;
+      index index.html
 
-      location ~ ^/&#60;uri_name&#62;(.*) {
-        alias &#60;path_to_angular_dist_project_folder&#62;;
-        try_files $1 $1/ /index.html =404;
+      location &#60;/angular/base_url&#62; {
+        alias &#60;/path/to/nginx/html&#62;
+        try_files $uri /index.html?$args;
+        autoindex off;
       }
     </pre>
   * Save and Exit
