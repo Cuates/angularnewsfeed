@@ -1,0 +1,152 @@
+<div class="pageStyle pt-2 ps-2 pe-2">
+  <div class="displayContainer">
+    <div class="pageTitleContainer pb-2 pt-2">
+      <div class="pageTitle p-2 mb-2 fw-bold">
+        <span class="d-flex justify-content-left align-items-center">
+          <mat-icon>newspaper</mat-icon>
+          &nbsp;News: Latest {{ limitValue }} Entries
+        </span>
+      </div>
+    </div>
+    <div class="p-2">
+      <!-- Check if is loading true, then show spinner, else do not display spinner //-->
+      <app-loader *ngIf="isLoading"></app-loader>
+      <!-- Check if media status is set, if so continue to display the data on the page, else do not display anything //-->
+      <div *ngIf="mediaData.Status">
+        <!-- Check if status returned success, if so continue to display the data on the page, else go to else block of code and display what returned //-->
+        <div *ngIf="mediaData.Status === 'Success' else elseBlock">
+          <!-- Display all data returned if any //-->
+          <div *ngFor="let mediaItems of mediaData.Result; let i = index;">
+            <div class="cardStyle position-relative border mb-2 rounded overflow-hidden">
+              <!-- Display the overlay only when a button is pressed //-->
+              <div class="wrapperLoaderRowStyle position-absolute w-100 h-100 opacity-25" *ngIf="mediaItems.isPressedButton">
+              </div>
+              <!-- Display the loader on top of the overlay only when a button is pressed //-->
+              <app-loader class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center" *ngIf="mediaItems.isPressedButton"></app-loader>
+              <div class="p-2">
+                <div class="mb-2 fw-bold text-break text-center d-flex justify-content-center align-items-center" *ngIf="mediaItems.imageurl">
+                  <!-- Title short value //-->
+                  <img src="{{ mediaItems.imageurl }}" alt="{{ mediaItems.title }}" class="img-fluid" width="600px" height="600px" />
+                </div>
+                <div class="cardTitle mb-2 fw-bold text-break text-center">
+                  <!-- Title long value //-->
+                  {{ mediaItems.title }}
+                </div>
+                <div class="d-flex flex-wrap justify-content-evenly">
+                  <div class="d-flex pb-2">
+                    <a href="{{ mediaItems.feedurl }}" target="_blank" rel="noopener noreferrer nofollow" class="text-decoration-none">
+                      <button mat-flat-button id="view" class="viewButton text-decoration-none rounded p-2" [disabled]="mediaItems.isPressedButton">
+                        <span class="d-flex justify-content-center align-items-center">
+                          <mat-icon>open_in_new</mat-icon>
+                          &nbsp;View
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                  <div>
+                    <button mat-flat-button id="delete" class="deleteButton text-decoration-none rounded p-2" (click)="handleAlterationDelete(mediaItems.title, i, mediaItems, 'Delete')" [disabled]="mediaItems.isPressedButton">
+                      <span class="d-flex justify-content-center align-items-center">
+                        <mat-icon>delete</mat-icon>
+                        &nbsp;Delete
+                        <div class="d-flex justify-content-center align-items-center" *ngIf="mediaItems.buttonDeleteIsLoading">
+                          <mat-spinner>
+                          </mat-spinner>
+                        </div>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Look at the code below to see if it still fits with Status "Error" instead of "Success"//-->
+              <div class="p-2">
+                <!-- Check if media status is set, if so continue to display the data on the page, else do not display anything //-->
+                <div *ngIf="mediaItems.statusResponse && mediaItems.displayValue">
+                  <!-- Check if status returned success, if so continue to display the data on the page, else go to else block of code and display what returned //-->
+                  <div *ngIf="mediaItems.statusResponse !== 'Success'">
+                    <div class="cardStyle position-relative border mb-4 rounded overflow-hidden">
+                      <div class="p-2 text-center">
+                        <div class="errorTitle">
+                          <span class="d-flex justify-content-center align-items-center">
+                            <mat-icon>report_problem</mat-icon>
+                          </span>
+                        </div>
+                        <div class="errorStatus">
+                          <!-- Status value //-->
+                          Status: {{ mediaItems.statusResponse }}
+                        </div>
+                        <div class="errorStatusMessage">
+                          <!-- Message value //-->
+                          Message: {{ mediaItems.messageResponse }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Check to see if OK is true as the API returned a hard error with a message //-->
+                <div *ngIf="mediaItems.okValue">
+                  <div class="cardStyle position-relative border mb-4 rounded overflow-hidden">
+                    <div class="p-2 text-center">
+                      <div class="errorTitle">
+                        <span class="d-flex justify-content-center align-items-center">
+                          <mat-icon>report_problem</mat-icon>
+                        </span>
+                      </div>
+                      <div class="errorStatus">
+                        <!-- Status value //-->
+                        Status Code: {{ mediaItems.statusValue }}
+                      </div>
+                      <div class="errorStatusMessage">
+                        <!-- Message value //-->
+                        Status Message: {{ mediaItems.messageValue }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Else block to display what was returned because success message did not return in status //-->
+        <ng-template #elseBlock>
+          <div class="cardStyle position-relative border mb-2 rounded overflow-hidden p-2">
+            <div class="p-2 text-center">
+              <div class="errorTitle">
+                <span class="d-flex justify-content-center align-items-center">
+                  <mat-icon>report_problem</mat-icon>
+                </span>
+              </div>
+              <div class="errorStatus">
+                <!-- Status value //-->
+                {{ mediaData.Status }}
+              </div>
+              <div class="errorStatusMessage">
+                <!-- Message value //-->
+                {{ mediaData.Message }}
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <!-- Check to see if OK is true as the API returned a hard error with a message //-->
+      <div *ngIf="!okValue">
+        <div class="cardStyle position-relative border mb-2 rounded overflow-hidden">
+          <div class="p-2 text-center">
+            <div class="errorTitle">
+              <span class="d-flex justify-content-center align-items-center">
+                <mat-icon>report_problem</mat-icon>
+              </span>
+            </div>
+            <div class="errorStatus">
+              <!-- Status value //-->
+              Status Code: {{ statusValue }}
+            </div>
+            <div class="errorStatusMessage">
+              <!-- Message value //-->
+              Status Message: {{ messageValue }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
