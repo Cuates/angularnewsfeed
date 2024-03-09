@@ -573,3 +573,4 @@ angularnewsfeed
 [IsActiveMatchOptions](https://angular.io/api/router/IsActiveMatchOptions) <br />
 [RouterLinkActive](https://angular.io/api/router/RouterLinkActive) <br />
 [angular-passing-optional-query-parameters-to-route/](https://www.tektutorialshub.com/angular/angular-passing-optional-query-parameters-to-route/) <br />
+[What's the difference between tilde(~) and caret(^) in package.json?](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) <br />
