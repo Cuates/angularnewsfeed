@@ -29,6 +29,15 @@ angularnewsfeed
 * Npm
   * `npm install -g npm@latest`
   * `npm -v`
+  * Update package.json file
+    * Install ncu package globally
+      * `npm install -g npm-check-updates`
+    * Checks for updates from the package.json file
+      * `ncu`
+    * Update the package.json file
+      * `ncu -u`
+    * Update your package-lock.json file from the package.json file
+      * `npm update --save`
 
 ### Generating Angular app with extra features
 * Generate Angular App
